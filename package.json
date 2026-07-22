@@ -1,0 +1,56 @@
+{
+	"name": "@llamaindex/create-llama-worker",
+	"version": "0.1.0",
+	"description": "Scaffold a CloudFlare worker for LlamaParse Platform services (Parse, Extract, Classify)",
+	"main": "src/index.ts",
+	"scripts": {
+		"build": "node build.cjs",
+		"lint": "eslint src/",
+		"prettier": "prettier .",
+		"prettier:fix": "prettier --write ."
+	},
+	"keywords": [
+		"cloudflare",
+		"worker",
+		"llamaparse",
+		"parsing",
+		"ai",
+		"document-intelligence"
+	],
+	"author": "Clelia Astra Bertelli <clelia@runllama.ai>",
+	"license": "MIT",
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": "^11.9.0",
+			"onFail": "download"
+		}
+	},
+	"type": "module",
+	"dependencies": {
+		"@clack/prompts": "^1.7.0",
+		"ajv": "^8.20.0",
+		"commander": "^15.0.0",
+		"nunjucks": "^3.2.4"
+	},
+	"devDependencies": {
+		"@eslint/js": "^10.0.1",
+		"@llamaindex/llama-cloud": "^2.11.0",
+		"@types/node": "^26.1.1",
+		"@types/nunjucks": "^3.2.6",
+		"esbuild": "^0.28.1",
+		"eslint": "^10.7.0",
+		"globals": "^17.7.0",
+		"jiti": "^2.7.0",
+		"prettier": "^3.9.6",
+		"typescript-eslint": "^8.65.0"
+	},
+	"bin": {
+		"create-llama-worker": "dist/index.js"
+	},
+	"files": [
+		"dist",
+		"templates",
+		"README.md"
+	]
+}
