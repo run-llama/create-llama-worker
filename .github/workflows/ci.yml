@@ -25,7 +25,8 @@ jobs:
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: '24.22.3'
-          cache: 'pnpm'
+          # No dependency cache: this workflow publishes on tags (zizmor cache-poisoning).
+          package-manager-cache: false
 
       - name: Install dependencies
         run: pnpm install
@@ -59,7 +60,8 @@ jobs:
         uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: '24.22.3'
-          cache: 'pnpm'
+          # No dependency cache: this workflow publishes on tags (zizmor cache-poisoning).
+          package-manager-cache: false
 
       - name: Install dependencies
         run: pnpm install
